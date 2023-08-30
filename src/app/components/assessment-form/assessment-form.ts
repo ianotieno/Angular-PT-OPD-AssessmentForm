@@ -29,7 +29,14 @@ export class Assessmentform{
       {type: 'text', name: 'Rle', placeHolder: 'Rle', label: 'Rle'},
       {type: 'text', name: 'Lle', placeHolder: 'Lle', label: 'Lle'},]
     },
-    {type: 'groupedInputs', name: 'Muscle Strength', label:'Muscle Strength', inputs: [
+    {type: 'groupedInputs', name: 'Functional Mobility ', label:'Functional Mobility ', inputs: [
+      {type: 'text', name: 'Gait ', placeHolder: 'Gait ', label: 'Gait '},
+      {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
+      {type: 'text', name: 'RightLower', placeHolder: 'Right Lower', label: 'Right Lower'},
+      {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
+      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
+    },
+     {type: 'groupedInputs', name: 'Muscle Strength', label:'Muscle Strength', inputs: [
       {type: 'text', name: 'RightUpperextremity', placeHolder: 'Right Upper extremity', label: 'Right Upper extremity'},
       {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
       {type: 'text', name: 'RightLower', placeHolder: 'Right Lower', label: 'Right Lower'},
@@ -59,7 +66,7 @@ export class Assessmentform{
     Left: ['', Validators.required],
     RightLower: ['', Validators.required],
     Balance: ['', Validators.required],
-    medical: ['', Validators.required],
+    Gait : ['', Validators.required],
     instruction: ['', Validators.required],
     doctor: ['', Validators.required],
   });
