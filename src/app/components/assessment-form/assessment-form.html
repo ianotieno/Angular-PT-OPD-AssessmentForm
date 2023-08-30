@@ -1,0 +1,21 @@
+<form [formGroup]="profileForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>PT OPD Assessment Form</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <app-inputs
+        *ngFor="let content of formContents"
+        [form]="profileForm"
+        [formContent]="content"
+      ></app-inputs>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button (click)="saveForm()" mat-raised-button color="primary">
+        Save
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>
