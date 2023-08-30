@@ -18,14 +18,9 @@ export class Assessmentform{
     
     {type: 'text', name: 'ReferringDoctor', placeHolder: 'Referring Doctor ', label: 'Referring Doctor '},
     {type: 'text', name: 'Diagnosis', placeHolder: 'Diagnosis', label: 'Diagnosis'},
-  
     {type: 'textarea', name: 'ChiefComplains', placeHolder: 'Chief Complains/Subjective History:', label: 'Chief Complains/Subjective History:'},
-    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
-      start: {name: 'dob', placeHolder: 'D.O.A'},
-      end: {name: 'dob', placeHolder: 'D.O.D'}
-    }},
-    {type: 'text', name: 'consultantNames', placeHolder: 'Name Of Consultant', label: 'Name Of Consultant(S): ?'},
-    {type: 'textarea', name: 'admission', placeHolder: 'Reason For Admission', label: 'Reason For Admission?'},
+    {type: 'textarea', name: 'PastMedical', placeHolder: 'Past Medical History', label: 'Past Medical History'},
+    {type: 'textarea', name: 'SurgicalHistory', placeHolder: 'Surgical History', label: 'Surgical History'},
     {type: 'text', name: 'comorbidities', placeHolder: 'Comorbidities', label: 'Comorbidities: '},
     {type: 'textarea', name: 'diagnosis', placeHolder: 'Diagnosis', label: 'Diagnosis'},
     {type: 'textarea', name: 'history', placeHolder: 'History (Medical & Surgical):', label: 'History (Medical & Surgical):'},
@@ -51,9 +46,8 @@ export class Assessmentform{
     ReferringDoctor: ['', Validators.required],
     Diagnosis: ['', Validators.required],
     ChiefComplains: ['', Validators.required],
-    dob: ['', Validators.required],
-    adminNo: ['', Validators.required],
-    consultantNames: ['', Validators.required],
+    PastMedical: ['', Validators.required],
+   SurgicalHistory: ['', Validators.required],
     admission: ['', Validators.required],
     comorbidities: ['', Validators.required],
     diagnosis: ['', Validators.required],
