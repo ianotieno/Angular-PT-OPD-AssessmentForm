@@ -11,15 +11,23 @@ import { TextContent } from 'src/app/interfaces/text-content';
   templateUrl: './assessment-form.html',
   styleUrls: ['./assessment-form.css'],
 })
-export class Assessmentform {
+export class Assessmentform{
   constructor(private formBuilder: FormBuilder) {}
 
   formContents: Array<TextContent | TextAreaContent | GroupedInputsContent | DateRangeContent | RadiosContent> = [
-    {type: 'text', name: 'ReferringDoctor', placeHolder: 'Enter Referring Doctor ', label: 'Referring Doctor Name'},
+    
+    {type: 'text', name: 'ReferringDoctor', placeHolder: 'Referring Doctor ', label: 'Referring Doctor '},
     {type: 'text', name: 'Diagnosis', placeHolder: 'Diagnosis', label: 'Diagnosis'},
-    {type: 'textarea', name: 'Chiefcomplains', placeHolder: 'Chief complains/subjective History', label: 'Chief complains/subjective History'},
-    {type: 'textarea', name: 'PastMedical', placeHolder: 'Past Medical History ', label: 'Past Medical History'},
-    {type: 'textarea', name: 'SurgicalHistory', placeHolder: 'Surgical History', label: 'Surgical History: '},
+  
+    {type: 'textarea', name: 'ChiefComplains', placeHolder: 'Chief Complains/Subjective History:', label: 'Chief Complains/Subjective History:'},
+    {type: 'dateRange', name: 'dob', label: 'Enter a date of D.O.A-D.O.D', hint: 'MM/DD/YYYY – MM/DD/YYYY', inputs: {
+      start: {name: 'dob', placeHolder: 'D.O.A'},
+      end: {name: 'dob', placeHolder: 'D.O.D'}
+    }},
+    {type: 'text', name: 'consultantNames', placeHolder: 'Name Of Consultant', label: 'Name Of Consultant(S): ?'},
+    {type: 'textarea', name: 'admission', placeHolder: 'Reason For Admission', label: 'Reason For Admission?'},
+    {type: 'text', name: 'comorbidities', placeHolder: 'Comorbidities', label: 'Comorbidities: '},
+    {type: 'textarea', name: 'diagnosis', placeHolder: 'Diagnosis', label: 'Diagnosis'},
     {type: 'textarea', name: 'history', placeHolder: 'History (Medical & Surgical):', label: 'History (Medical & Surgical):'},
     {type: 'textarea', name: 'investigations', placeHolder: 'Investigations', label: 'Investigations:'},
     {type: 'textarea', name: 'labs', placeHolder: 'Labs & Attached Results:', label: 'Labs & Attached Results:'},
@@ -42,9 +50,12 @@ export class Assessmentform {
   profileForm = this.formBuilder.group({
     ReferringDoctor: ['', Validators.required],
     Diagnosis: ['', Validators.required],
-    Chiefcomplains: ['', Validators.required],
-    PastMedical: ['', Validators.required],
-    SurgicalHistory: ['', Validators.required],
+    ChiefComplains: ['', Validators.required],
+    dob: ['', Validators.required],
+    adminNo: ['', Validators.required],
+    consultantNames: ['', Validators.required],
+    admission: ['', Validators.required],
+    comorbidities: ['', Validators.required],
     diagnosis: ['', Validators.required],
     history: ['', Validators.required],
     investigations: ['', Validators.required],
