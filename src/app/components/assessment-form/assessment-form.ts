@@ -23,17 +23,18 @@ export class Assessmentform{
     {type: 'textarea', name: 'PastMedical', placeHolder: 'Past Medical History', label: 'Past Medical History'},
     {type: 'textarea', name: 'SurgicalHistory', placeHolder: 'Surgical History', label: 'Surgical History'},
     
-    {type: 'groupedInputs', name: 'Objective Examination(Range Of Motion )',  inputs: [
+    {type: 'groupedInputs', name: 'Objective Examination(Range Of Motion )', label: 'Objective Examination(Range Of Motion )',  inputs: [
       {type: 'text', name: 'Rue', placeHolder: 'Rue', label: 'Rue'},
       {type: 'text', name: 'Lue', placeHolder: 'Lue', label: 'Lue'},
       {type: 'text', name: 'Rle', placeHolder: 'Rle', label: 'Rle'},
       {type: 'text', name: 'Lle', placeHolder: 'Lle', label: 'Lle'},]
     },
-    {type: 'groupedInputs', name: 'Muscle Strength',  inputs: [
+    {type: 'groupedInputs', name: 'Muscle Strength', label:'Muscle Strength', inputs: [
       {type: 'text', name: 'RightUpperextremity', placeHolder: 'Right Upper extremity', label: 'Right Upper extremity'},
       {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
-      {type: 'text', name: 'Rle', placeHolder: 'Rle', label: 'Rle'},
-      {type: 'text', name: 'Lle', placeHolder: 'Lle', label: 'Lle'},]
+      {type: 'text', name: 'RightLower', placeHolder: 'Right Lower', label: 'Right Lower'},
+      {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
+      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
     },
     {type: 'textarea', name: 'occupational', placeHolder: 'Occupational Therapy- Functionality', label: 'Occupational Therapy- Functionality:'},
     {type: 'textarea', name: 'speech', placeHolder: 'Speech Therapy-Feeding & Swallowing', label: 'Speech Therapy-Feeding & Swallowing:'},
@@ -56,8 +57,8 @@ export class Assessmentform{
     Lle: ['', Validators.required],
     RightUpperextremity: ['', Validators.required],
     Left: ['', Validators.required],
-    nursing: ['', Validators.required],
-    clinical: ['', Validators.required],
+    RightLower: ['', Validators.required],
+    Balance: ['', Validators.required],
     medical: ['', Validators.required],
     instruction: ['', Validators.required],
     doctor: ['', Validators.required],
