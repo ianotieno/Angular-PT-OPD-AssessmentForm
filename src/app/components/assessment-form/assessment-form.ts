@@ -44,7 +44,15 @@ export class Assessmentform{
       {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
     },
     {type: 'textarea', name: 'Assessment', placeHolder: 'Assessment', label: 'Assessment'},
-    {type: 'textarea', name: 'speech', placeHolder: 'Speech Therapy-Feeding & Swallowing', label: 'Speech Therapy-Feeding & Swallowing:'},
+    {type: 'textarea', name: 'Precautions', placeHolder: 'Precautions', label: 'Precautions'},
+
+    {type: 'groupedInputs', name: 'Pt Plan Of Care ', label:'Pt Plan Of Care ', inputs: [
+      {type: 'text', name: 'TreatmentFrequency', placeHolder: 'Treatment Frequency', label: 'Treatment Frequency'},
+      {type: 'text', name: 'Week Duration', placeHolder: 'Week Duration', label: 'Week Duration'},
+      {type: 'text', name: 'Posture', placeHolder: 'Posture', label: 'Posture'},
+      {type: 'text', name: 'SpecialTests', placeHolder: 'Special Tests: ', label: 'Special Tests: '},
+      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
+    },
     {type: 'textarea', name: 'nursing', placeHolder: 'Nursing', label: 'Nursing:'},
     {type: 'textarea', name: 'clinical', placeHolder: 'Clinical Condition On Discharge', label: 'Clinical Condition On Discharge:'},
     {type: 'textarea', name: 'medical', placeHolder: 'Medication On Discharge', label: 'Medication On Discharge:'},
@@ -70,6 +78,8 @@ export class Assessmentform{
     Pain: ['', Validators.required],
     SpecialTests: ['', Validators.required],
     Assessment: ['', Validators.required],
+    Precautions:['', Validators.required],
+    TreatmentFrequency:['', Validators.required],
   });
 
   saveForm() {
