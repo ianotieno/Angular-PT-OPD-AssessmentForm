@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { DateRangeContent } from 'src/app/interfaces/date-range-content';
 import { GroupedInputsContent } from 'src/app/interfaces/grouped-inputs-content';
-import { RadiosContent } from 'src/app/interfaces/radios-content';
 import { TextAreaContent } from 'src/app/interfaces/text-area-content';
 import { TextContent } from 'src/app/interfaces/text-content';
 
@@ -15,7 +13,7 @@ import { TextContent } from 'src/app/interfaces/text-content';
 export class Assessmentform{
   constructor(private formBuilder: FormBuilder) {}
 
-  formContents: Array<TextContent | TextAreaContent | GroupedInputsContent | DateRangeContent | RadiosContent> = [
+  formContents: Array<TextContent | TextAreaContent | GroupedInputsContent > = [
     
     {type: 'text', name: 'ReferringDoctor', placeHolder: 'Referring Doctor ', label: 'Referring Doctor '},
     {type: 'text', name: 'Diagnosis', placeHolder: 'Diagnosis', label: 'Diagnosis'},
@@ -41,15 +39,15 @@ export class Assessmentform{
       {type: 'text', name: 'Pain', placeHolder: 'Pain', label: 'Pain'},
       {type: 'text', name: 'Posture', placeHolder: 'Posture', label: 'Posture'},
       {type: 'text', name: 'SpecialTests', placeHolder: 'Special Tests: ', label: 'Special Tests: '},
-      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
-    },
+      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]},
+
     {type: 'textarea', name: 'Assessment', placeHolder: 'Assessment', label: 'Assessment'},
     {type: 'textarea', name: 'Precautions', placeHolder: 'Precautions', label: 'Precautions'},
 
     {type: 'groupedInputs', name: 'Pt Plan Of Care ', label:'Pt Plan Of Care ', inputs: [
       {type: 'text', name: 'TreatmentFrequency', placeHolder: 'Treatment Frequency', label: 'Treatment Frequency'},
-      {type: 'text', name: 'WeekDuration', placeHolder: 'Week Duration', label: 'Week Duration'},]
-    },
+      {type: 'text', name: 'WeekDuration', placeHolder: 'Week Duration', label: 'Week Duration'},] },
+      
     {type: 'groupedInputs', name: 'Interventions', label:'Interventions', inputs: [
       {type: 'text', name: 'Interventions', placeHolder: 'Interventions',label: ''},
       {type: 'text', name: 'Interventions', placeHolder: 'Interventions',label: ''},

@@ -13,21 +13,6 @@
       [name]="formContent['name']"
       [label]="formContent['label']"
     ></app-textarea>
-    <app-date-range
-      *ngIf="formContent['type'] === 'dateRange'"
-      [form]="form"
-      [name]="formContent['name']"
-      [label]="formContent['label']"
-      [hint]="formContent['hint']"
-      [inputs]="formContent['inputs']"
-    ></app-date-range>
-    <app-radios
-      *ngIf="formContent['type'] === 'radios'"
-      [form]="form"
-      [name]="formContent['name']"
-      [label]="formContent['label']"
-      [options]="formContent['options']"
-    ></app-radios>
     <app-grouped-inputs
       *ngIf="formContent['type'] === 'groupedInputs'"
       [form]="form"
