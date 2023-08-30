@@ -29,13 +29,6 @@ export class Assessmentform{
       {type: 'text', name: 'Rle', placeHolder: 'Rle', label: 'Rle'},
       {type: 'text', name: 'Lle', placeHolder: 'Lle', label: 'Lle'},]
     },
-    {type: 'groupedInputs', name: 'Functional Mobility ', label:'Functional Mobility ', inputs: [
-      {type: 'text', name: 'Gait ', placeHolder: 'Gait ', label: 'Gait '},
-      {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
-      {type: 'text', name: 'RightLower', placeHolder: 'Right Lower', label: 'Right Lower'},
-      {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
-      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
-    },
      {type: 'groupedInputs', name: 'Muscle Strength', label:'Muscle Strength', inputs: [
       {type: 'text', name: 'RightUpperextremity', placeHolder: 'Right Upper extremity', label: 'Right Upper extremity'},
       {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
@@ -43,7 +36,14 @@ export class Assessmentform{
       {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
       {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
     },
-    {type: 'textarea', name: 'occupational', placeHolder: 'Occupational Therapy- Functionality', label: 'Occupational Therapy- Functionality:'},
+    {type: 'groupedInputs', name: 'Functional Mobility ', label:'Functional Mobility ', inputs: [
+      {type: 'text', name: 'Gait ', placeHolder: 'Gait ', label: 'Gait '},
+      {type: 'text', name: 'Pain', placeHolder: 'Pain', label: 'Pain'},
+      {type: 'text', name: 'Posture', placeHolder: 'Posture', label: 'Posture'},
+      {type: 'text', name: 'SpecialTests', placeHolder: 'Special Tests: ', label: 'Special Tests: '},
+      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
+    },
+    {type: 'textarea', name: 'Assessment', placeHolder: 'Assessment', label: 'Assessment'},
     {type: 'textarea', name: 'speech', placeHolder: 'Speech Therapy-Feeding & Swallowing', label: 'Speech Therapy-Feeding & Swallowing:'},
     {type: 'textarea', name: 'nursing', placeHolder: 'Nursing', label: 'Nursing:'},
     {type: 'textarea', name: 'clinical', placeHolder: 'Clinical Condition On Discharge', label: 'Clinical Condition On Discharge:'},
@@ -66,9 +66,10 @@ export class Assessmentform{
     Left: ['', Validators.required],
     RightLower: ['', Validators.required],
     Balance: ['', Validators.required],
-    Gait : ['', Validators.required],
-    instruction: ['', Validators.required],
-    doctor: ['', Validators.required],
+    Gait: ['', Validators.required],
+    Pain: ['', Validators.required],
+    SpecialTests: ['', Validators.required],
+    Assessment: ['', Validators.required],
   });
 
   saveForm() {
