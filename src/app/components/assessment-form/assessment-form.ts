@@ -48,16 +48,22 @@ export class Assessmentform{
 
     {type: 'groupedInputs', name: 'Pt Plan Of Care ', label:'Pt Plan Of Care ', inputs: [
       {type: 'text', name: 'TreatmentFrequency', placeHolder: 'Treatment Frequency', label: 'Treatment Frequency'},
-      {type: 'text', name: 'Week Duration', placeHolder: 'Week Duration', label: 'Week Duration'},
-      {type: 'text', name: 'Posture', placeHolder: 'Posture', label: 'Posture'},
-      {type: 'text', name: 'SpecialTests', placeHolder: 'Special Tests: ', label: 'Special Tests: '},
-      {type: 'text', name: 'Balance', placeHolder: 'Balance', label: 'Balance'},]
+      {type: 'text', name: 'WeekDuration', placeHolder: 'Week Duration', label: 'Week Duration'},]
     },
-    {type: 'textarea', name: 'nursing', placeHolder: 'Nursing', label: 'Nursing:'},
-    {type: 'textarea', name: 'clinical', placeHolder: 'Clinical Condition On Discharge', label: 'Clinical Condition On Discharge:'},
-    {type: 'textarea', name: 'medical', placeHolder: 'Medication On Discharge', label: 'Medication On Discharge:'},
-    {type: 'textarea', name: 'instruction', placeHolder: 'Instruction On Discharge', label: 'Instruction On Discharge:'},
-    {type: 'text', name: 'doctor', placeHolder: 'Doctor’s Name', label: 'Doctor’s Name:'}
+    {type: 'groupedInputs', name: 'Interventions', label:'Interventions', inputs: [
+      {type: 'text', name: 'Interventions', placeHolder: 'Interventions',label: ''},
+      {type: 'text', name: 'Interventions', placeHolder: 'Interventions',label: ''},
+      {type: 'text', name: 'Interventions', placeHolder: 'Interventions',label: ''},
+      {type: 'text', name: 'Interventions', placeHolder: 'Interventions',label: ''},
+    ]},
+    {type: 'groupedInputs', name: 'Anticipated Goals', label:'Anticipated Goals', inputs: [
+      {type: 'text', name: 'AnticipatedGoals', placeHolder: 'Anticipated Goals',label: ''},
+      {type: 'text', name: 'AnticipatedGoals', placeHolder: 'Anticipated Goals',label: ''},
+      {type: 'text', name: 'AnticipatedGoals', placeHolder: 'Anticipated Goals',label: ''},
+      {type: 'text', name: 'AnticipatedGoals', placeHolder: 'Anticipated Goals',label: ''},
+    ]},
+   
+    {type: 'text', name: 'PhysicalTherapist', placeHolder: 'Physical Therapist', label: 'Physical Therapist'}
   ]
 
   profileForm = this.formBuilder.group({
@@ -80,6 +86,11 @@ export class Assessmentform{
     Assessment: ['', Validators.required],
     Precautions:['', Validators.required],
     TreatmentFrequency:['', Validators.required],
+    WeekDuration:['', Validators.required],
+    PhysicalTherapist:['', Validators.required],
+    Interventions:['', Validators.required],
+    AnticipatedGoals:['', Validators.required],
+    
   });
 
   saveForm() {
