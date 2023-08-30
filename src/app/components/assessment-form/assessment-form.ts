@@ -6,6 +6,7 @@ import { RadiosContent } from 'src/app/interfaces/radios-content';
 import { TextAreaContent } from 'src/app/interfaces/text-area-content';
 import { TextContent } from 'src/app/interfaces/text-content';
 
+
 @Component({
   selector: 'app-assessment-form',
   templateUrl: './assessment-form.html',
@@ -28,6 +29,12 @@ export class Assessmentform{
       {type: 'text', name: 'Rle', placeHolder: 'Rle', label: 'Rle'},
       {type: 'text', name: 'Lle', placeHolder: 'Lle', label: 'Lle'},]
     },
+    {type: 'groupedInputs', name: 'Muscle Strength',  inputs: [
+      {type: 'text', name: 'RightUpperextremity', placeHolder: 'Right Upper extremity', label: 'Right Upper extremity'},
+      {type: 'text', name: 'Left', placeHolder: 'Left', label: 'Left'},
+      {type: 'text', name: 'Rle', placeHolder: 'Rle', label: 'Rle'},
+      {type: 'text', name: 'Lle', placeHolder: 'Lle', label: 'Lle'},]
+    },
     {type: 'textarea', name: 'occupational', placeHolder: 'Occupational Therapy- Functionality', label: 'Occupational Therapy- Functionality:'},
     {type: 'textarea', name: 'speech', placeHolder: 'Speech Therapy-Feeding & Swallowing', label: 'Speech Therapy-Feeding & Swallowing:'},
     {type: 'textarea', name: 'nursing', placeHolder: 'Nursing', label: 'Nursing:'},
@@ -47,8 +54,8 @@ export class Assessmentform{
     Lue: ['', Validators.required],
     Rle: ['', Validators.required],
     Lle: ['', Validators.required],
-    occupational: ['', Validators.required],
-    speech: ['', Validators.required],
+    RightUpperextremity: ['', Validators.required],
+    Left: ['', Validators.required],
     nursing: ['', Validators.required],
     clinical: ['', Validators.required],
     medical: ['', Validators.required],
